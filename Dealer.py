@@ -21,12 +21,15 @@ def shuffle_deck() -> list:
     return entire_deck
 
 
-def number_of_players() -> int:
+def number_of_cards() -> int:
     """
-    Returns the number of players playing.
+    Returns an empty list for each player symbolizing how many cards they have.
     """
-    players = int(input('How many players are playing? \n \n: '))
-    
+    players = list(range(1, int(input('How many players are playing? \n \n: ')) + 1))
+    for player in players:
+        exec(f'player_{player} = []')
+
+
 
 
 def deal(card_game: str) -> int:
@@ -36,6 +39,7 @@ def deal(card_game: str) -> int:
     deck = shuffle_deck()
     players = list(range(1, (number_of_players() + 1)))
 
-    if card_game == 'black jack':
-        for player in players:
+   # if card_game == 'black jack':
+    #    for player in players:
 
+number_of_cards()
