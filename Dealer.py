@@ -21,25 +21,15 @@ def shuffle_deck() -> list:
     return entire_deck
 
 
-def number_of_cards() -> int:
+def number_of_players() -> dict:
     """
-    Returns an empty list for each player symbolizing how many cards they have.
+    Returns a dictionary of the number of players playing as keys and zero as values assigned to them
+    symbolizing not having any cards.
     """
     players = list(range(1, int(input('How many players are playing? \n \n: ')) + 1))
+    dict_of_players = {}
     for player in players:
-        exec(f'player_{player} = []')
+        dict_of_players.update({'player_' + str(player): 0})
+    return dict_of_players
 
-
-
-
-def deal(card_game: str) -> int:
-    """
-    Deals each card to each of the players.
-    """
-    deck = shuffle_deck()
-    players = list(range(1, (number_of_players() + 1)))
-
-   # if card_game == 'black jack':
-    #    for player in players:
-
-number_of_cards()
+def deal() -> 
