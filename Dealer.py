@@ -32,4 +32,7 @@ def number_of_players() -> dict:
         dict_of_players.update({'player_' + str(player): 0})
     return dict_of_players
 
-def deal() -> 
+def deal():
+    """
+    I want this to deal each player the cards and add the total to the value in the dictionary
+    """
